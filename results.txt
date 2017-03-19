@@ -1,0 +1,46 @@
+----1----
+
+These are the testing datset errors for each type:
+This is using relu, size 50 embeddings and 200 hidden and 0.95 dropout
+
+rand &no_leanring 0.478000000119
+glove &no_learning: 0.519999992847
+rand & learning: 0.437999996543
+glove & learning: 0.618000006676
+
+----2----
+Here we compare the activation function:
+(using 50 embddings, 200hidden size and 0.95 droppout)
+
+tanh: 0.5 
+logsig: 0.613999998569 
+relu: 0.591999995708
+
+----3----
+Here we compare the dropout variation:
+(using relu, 50 glove learnable embeddings, 200hidden size)
+
+1: 0.5
+0.95: 0.598000001907
+0.9: 0.310000002384
+0.85: 0.269999998808
+0.8: 0.371999996901
+
+----4----
+Here we vary the size of the hidden layer:
+(using relu, 50 glove learnable embeddings and 0.95 dropout)
+
+10: 0.224000000954
+50: 0.306000006199
+100: 0.348000001907
+200: 0.308000004292
+500: 0.292000001669
+
+----5----
+
+We add two new tf variables, one of shape (2nd hiddensize, 8) for the weights matrix and one of shape (2nd hidden) for the biases. The shape for the first hidden layer weights matrix will chnage to (1st hidden size, 2nd hidden size) and bias to (2nd hidden size).
+The rest of the network remains the same 
+
+----6----
+
+Here we use a z
